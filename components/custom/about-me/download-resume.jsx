@@ -4,15 +4,14 @@ import { InteractiveHoverButton } from '@/components/magicui/interactive-hover-b
 export function DownLoadResume() {
   return (
     <section className='flex justify-center'>
-      <button
-        onClick={() => {
-          window.open('/pdf/resume.pdf', '_blank');
-        }}
-      >
-        <InteractiveHoverButton className='mt-10 rounded '>
+        <InteractiveHoverButton
+          className='mt-10 rounded'
+          onClick={() => {
+            window.open('/pdf/resume.pdf', '_blank');
+          }}
+        >
           Download My Resume
         </InteractiveHoverButton>
-      </button>
     </section>
   );
 }

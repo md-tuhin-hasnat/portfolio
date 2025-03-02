@@ -23,18 +23,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <WarpContainer>
         <body
-          className={`${exo2.className} antialiased fixed h-svh w-full flex justify-center`}
-        >
-            <section className="flex gap-2 justify-center mt-[5svh] max-w-[1400] w-full">
-              <IntroContainer />
-              <MainContainer>
-                {children}
-              </MainContainer>
+          className={`${exo2.className} antialiased`}
+          >
+          <WarpContainer>
+            <section className="flex justify-center items-center mx-auto w-svw h-svh">
+              <section className="flex gap-2 justify-center w-full mt-[5svh] max-w-[1400px]">
+                <IntroContainer />
+                <MainContainer>
+                  {children}
+                </MainContainer>
+              </section>
             </section>
-        </body>
-      </WarpContainer>
+        </WarpContainer>
+      </body>
     </html>
   );
 }
