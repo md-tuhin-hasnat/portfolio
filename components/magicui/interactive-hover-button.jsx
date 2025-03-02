@@ -2,16 +2,13 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export const InteractiveHoverButton = React.forwardRef<
-  HTMLButtonElement,
-  React.ButtonHTMLAttributes<HTMLButtonElement>
->(({ children, className, ...props }, ref) => {
+export const InteractiveHoverButton = React.forwardRef(({ children, className, ...props }, ref) => {
   return (
     <button
       ref={ref}
       className={cn(
         "group relative w-auto cursor-pointer overflow-hidden rounded-full border bg-background p-2 px-6 text-center font-semibold",
-        className
+        className,
       )}
       {...props}
     >
