@@ -15,11 +15,11 @@ const exo2 = Exo_2({
 });
 export const metadata = {
   title: "Md Tuhin Hasnat | CSE Student & Problem Solver",
-  description: "Official website of Md Tuhin Hasnat – Comuter Engineering Student, Competitive Programming Trainer, and Tech Enthusiast.",
+  description: "Official website of Md Tuhin Hasnat – Computer Engineering Student, Competitive Programming Trainer, and Tech Enthusiast.",
   keywords: ["Md Tuhin Hasnat", "Software Engineer", "Competitive Programming", "Portfolio", "Next.js", "Instructor"],
   metadataBase: new URL("https://me.mdtuhinhasnat.top"),
   openGraph: {
-    title: "Md Tuhin Hasnat | Software Developer & Instructor",
+    title: "Md Tuhin Hasnat | CSE Student & Problem Solver",
     description: "Explore my portfolio, projects, and teaching work in competitive programming and software development.",
     url: "https://me.mdtuhinhasnat.top",
     siteName: "Md Tuhin Hasnat",
