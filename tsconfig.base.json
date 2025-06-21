@@ -15,7 +15,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve", // Updated to react-jsx for React 17+
+    "jsx": "react-jsx",  // Updated to react-jsx for React 17+
     "incremental": true,
     "plugins": [
       {
@@ -31,7 +31,7 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx", // Ensure .tsx is used for React components
+    "**/*.tsx",  // Ensure .tsx is used for React components
     ".next/types/**/*.ts",
     "app/page.tsx",
     "app/layout.tsx",
