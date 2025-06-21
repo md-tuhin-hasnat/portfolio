@@ -14,10 +14,34 @@ const exo2 = Exo_2({
   subsets: ["latin"],
 });
 export const metadata = {
-  title: "Md Tuhin Hasnat",
-  description: "CSE student with experience as a Competitive Programming Instructor and Teaching Assistant. Passionate about learning new technologies and sharing knowledge. Quick learner and team player seeking a full-time software development position.Participated in prestigious competitive contests like ICPC Dhaka Regional Final for 2 times, NCPC, and various IUPC across the country.Experienced in data structures, and algorithms. Proficient in JavaScript, Python, and C++. Familiar with React, Node.js, MySQL, and MongoDB.",
-};
-
+  title: "Md Tuhin Hasnat | CSE Student & Problem Solver",
+  description: "Official website of Md Tuhin Hasnat – Comuter Engineering Student, Competitive Programming Trainer, and Tech Enthusiast.",
+  keywords: ["Md Tuhin Hasnat", "Software Engineer", "Competitive Programming", "Portfolio", "Next.js", "Instructor"],
+  metadataBase: new URL("https://me.mdtuhinhasnat.top"),
+  openGraph: {
+    title: "Md Tuhin Hasnat | Software Developer & Instructor",
+    description: "Explore my portfolio, projects, and teaching work in competitive programming and software development.",
+    url: "https://me.mdtuhinhasnat.top",
+    siteName: "Md Tuhin Hasnat",
+    images: [
+      {
+        url: "https://me.mdtuhinhasnat.top/og-image.png", // Make a nice banner image
+        width: 1200,
+        height: 630,
+        alt: "Md Tuhin Hasnat Portfolio Preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Md Tuhin Hasnat | CSE Student & Problem Solver",
+    description: "Explore my portfolio, projects, and teaching work in competitive programming and software development.",
+    creator: "@MDTuhinhasnat1", // optional
+    images: ["https://me.mdtuhinhasnat.top/og-image.png"],
+  }
+}
 export default function RootLayout({
   children,
 }) {
