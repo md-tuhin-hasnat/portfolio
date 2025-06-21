@@ -20,7 +20,7 @@ export const metadata = {
   metadataBase: new URL("https://me.mdtuhinhasnat.top"),
   openGraph: {
     title: "Md Tuhin Hasnat | CSE Student & Problem Solver",
-    description: "Explore my portfolio, projects, and teaching work in competitive programming and software development.",
+    description: "Explore my portfolio, projects, and training work in competitive programming and software development.",
     url: "https://me.mdtuhinhasnat.top",
     siteName: "Md Tuhin Hasnat",
     images: [
@@ -37,7 +37,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Md Tuhin Hasnat | CSE Student & Problem Solver",
-    description: "Explore my portfolio, projects, and teaching work in competitive programming and software development.",
+    description: "Explore my portfolio, projects, and training work in competitive programming and software development.",
     creator: "@MDTuhinhasnat1", // optional
     images: ["https://me.mdtuhinhasnat.top/og-image.png"],
   }
