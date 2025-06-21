@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/page.jsx", "app/layout.jsx", "components/magicui/interactive-hover-button.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/page.jsx", "app/layout.jsx", "components/magicui/interactive-hover-button.jsx", "hooks/use-usage-limit.js", "hooks/use-toast.js", "hooks/use-mobile.jsx", "components/chat.jsx", "ai/genkit.js", "ai/dev.js", "ai/flows/summarize-content.js", "ai/flows/answer-question-with-context.js"],
   "exclude": ["node_modules"]
 }

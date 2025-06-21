@@ -16,7 +16,7 @@ export const navLink = [
     label: "Education",
   },
   {
-    href: "/contact",
-    label: "Contact",
+    href: "/askai",
+    label: "Ask AI",
   }
 ];
