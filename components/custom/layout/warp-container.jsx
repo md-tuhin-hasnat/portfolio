@@ -10,7 +10,7 @@ export default function WarpContainer({children}){
 
   return (
     isClient === true ?
-    <WarpBackground className="fixed h-svh w-full" perspective={90}>
+    <WarpBackground className="fixed h-svh w-full" perspective={400}>
       {children}
     </WarpBackground>
     :<section>{children}</section>

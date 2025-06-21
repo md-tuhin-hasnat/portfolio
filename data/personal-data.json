@@ -1,0 +1,109 @@
+{
+  "name": "Md Tuhin Hasnat",
+  "summary": "CSE final year student with teaching experience as a competitive programming trainer and teaching assistant, consistent academic excellence, competitive programming achievements, and proficiency in C, C++ and JavaScript.",
+  "skills": [
+    "C++",
+    "C",
+    "JavaScript",
+    "MySQL",
+    "MongoDB",
+    "Node.js",
+    "React.js",
+    "Next.js",
+    "Express.js",
+    "Passport.js",
+    "Docker",
+    "Golang",
+    "WebSocket"
+  ],
+  "experience": [
+    {
+      "company": "Bangladesh University of Business and Technology",
+      "role": "Teaching Assistant",
+      "period": "January 2025 – Present",
+      "description": "Assisting in academic activities, mentoring students in Computer Science courses, and helping with lab sessions."
+    },
+    {
+      "company": "Bangladesh University of Business and Technology",
+      "role": "Competitive Programming Trainer (Beginner Level)",
+      "period": "June 2024 – Present",
+      "description": "Training beginner-level students in problem solving and algorithmic thinking for competitive programming."
+    },
+    {
+      "company": "BUBT Intra-University Programming Contest 2025 Spring",
+      "role": "Problem Setter and Judge",
+      "period": "May 2025",
+      "description": "Designed and judged algorithmic problems for the university programming contest."
+    }
+  ],
+  "education": [
+    {
+      "degree": "BSc in Computer Science and Engineering",
+      "institution": "Bangladesh University of Business and Technology, Mirpur-2, Dhaka 1216",
+      "period": "January 2021 – December 2025",
+      "cgpa": "3.98 out of 4.0"
+    },
+    {
+      "degree": "Higher Secondary Certificate (HSC)",
+      "institution": "Dr. Abdur Razzak Municipal College, Jashore",
+      "period": "2018 – 2019",
+      "gpa": "5.00 out of 5.00"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Primas OJ",
+      "description": "An online judge system for competitive programming contests with features like contest creation, submission handling, and judging solutions written in C, C++, and Python. Built using Next.js, Golang, Docker, and WebSocket.",
+      "link": "https://github.com/md-tuhin-hasnat/primas-oj"
+    },
+    {
+      "name": "MessMaster",
+      "description": "A multi-user mess management system to track expenses, meals, and user roles. Includes real-time notifications for join requests, events, and messages. Built using Next.js, Express.js, and Passport.js.",
+      "link": "https://github.com/md-tuhin-hasnat/messify"
+    }
+  ],
+  "competitiveProgramming": {
+    "codeforces": {
+      "title": "Specialist at Codeforces",
+      "rating": 1445,
+      "yearsActive": "2024 - Present"
+    },
+    "icpc": [
+      {
+        "title": "ICPC Dhaka Regional Finalist",
+        "years": [2023, 2024],
+        "ranks": [68, 93]
+      }
+    ],
+    "iups": {
+      "title": "Inter University Programming Contests (IUPC)",
+      "years": "2023 - 2025",
+      "ranks": [71, 81, 106]
+    },
+    "ncpc": {
+      "title": "National Collegiate Programming Contest (NCPC)",
+      "year": 2023,
+      "rank": 117
+    },
+    "collabContests": {
+      "title": "Inter University Collaborative Programming Contests",
+      "years": "2023 - 2024",
+      "ranks": [5, 6, 10]
+    },
+    "bubtContests": {
+      "title": "BUBT Intra University Programming Contests",
+      "years": "2021 - 2024",
+      "results": {
+        "2ndPlace": 3,
+        "3rdPlace": 1
+      }
+    }
+  },
+  "contact": {
+    "email": "mdtuhinhasnat@gmail.com",
+    "linkedin": "https://linkedin.com/in/mdtuhinhasnat",
+    "github": "https://github.com/md-tuhin-hasnat",
+    "website": "https://me.mdtuhinhasnat.top",
+    "phone": "+8801318440994"
+  }
+}

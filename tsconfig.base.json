@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",  // Updated to react-jsx for React 17+
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",  // Ensure .tsx is used for React components
+    ".next/types/**/*.ts",
+    "app/page.tsx",
+    "app/layout.tsx",
+    "components/magicui/interactive-hover-button.tsx",
+    "hooks/use-usage-limit.js",
+    "hooks/use-toast.js",
+    "hooks/use-mobile.tsx",
+    "components/chat.tsx",
+    "ai/genkit.js",
+    "ai/dev.js",
+    "ai/flows/summarize-content.js",
+    "ai/flows/answer-question-with-context.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
