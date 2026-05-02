@@ -19,7 +19,7 @@ const nextConfig: NextConfig = {
     // Use the '$' suffix for an exact match so sub-modules like 'react/jsx-runtime' still work
     config.resolve.alias = {
       ...config.resolve.alias,
-      'react$': path.resolve(__dirname, 'lib/react-polyfill.js'),
+      'react$': path.resolve(process.cwd(), 'lib/react-polyfill.js'),
     };
     return config;
   },
