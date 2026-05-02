@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
   typescript: {
@@ -14,7 +15,11 @@ const nextConfig: NextConfig = {
     ],
   },
   webpack(config) {
-    // Optionally modify Webpack settings here
+    // Alias react to our polyfill to provide useEffectEvent for Sanity
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      react: path.resolve(__dirname, 'lib/react-polyfill.js'),
+    };
     return config;
   },
 };
