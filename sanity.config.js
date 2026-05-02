@@ -6,15 +6,15 @@ import { schemaTypes } from './sanity/schemas'
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
 
-if (!projectId) {
-  console.warn('Sanity Project ID is missing. Please set NEXT_PUBLIC_SANITY_PROJECT_ID in your .env file.')
-}
+// Use dynamic plugins to avoid build-time errors with React 19/Sanity structure tool
+const isDevelopment = process.env.NODE_ENV === 'development'
+const isBrowser = typeof window !== 'undefined'
 
 export default defineConfig({
   basePath: '/studio',
   projectId,
   dataset,
-  plugins: [structureTool(), visionTool()],
+  plugins: (isDevelopment || isBrowser) ? [structureTool(), visionTool()] : [],
   schema: {
     types: schemaTypes,
   },
