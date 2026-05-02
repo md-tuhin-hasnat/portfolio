@@ -16,9 +16,10 @@ const nextConfig: NextConfig = {
   },
   webpack(config) {
     // Alias react to our polyfill to provide useEffectEvent for Sanity
+    // Use the '$' suffix for an exact match so sub-modules like 'react/jsx-runtime' still work
     config.resolve.alias = {
       ...config.resolve.alias,
-      react: path.resolve(__dirname, 'lib/react-polyfill.js'),
+      'react$': path.resolve(__dirname, 'lib/react-polyfill.js'),
     };
     return config;
   },
