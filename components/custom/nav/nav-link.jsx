@@ -8,9 +8,9 @@ export function NavLink({href, label}){
   return(
     <Link
       href={href} 
-      className={cn("text-sm font-medium hover:text-primary", {
-        "text-secondary-foreground/70": currentPath !== href,
-        "text-primary border-b-2 border-primary": currentPath === href,
+      className={cn("text-sm font-black uppercase tracking-widest hover:text-primary transition-all", {
+        "text-white/70": currentPath !== href,
+        "text-white border-b-2 border-primary drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]": currentPath === href,
       })}
     >
       {label}

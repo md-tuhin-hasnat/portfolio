@@ -164,16 +164,19 @@ export function Chat() {
   };
 
   return (
-    <Card className="w-full max-w-2xl h-[calc(84svh-45px)] flex flex-col shadow-2xl">
-      <CardHeader className="border-b">
+    <Card className="w-full max-w-2xl h-[calc(84svh-45px)] flex flex-col bg-white/5 backdrop-blur-md border border-white/10 shadow-2xl relative overflow-hidden">
+      <CardHeader className="border-b border-white/10 bg-white/5 relative z-10">
         <div className="flex justify-between items-center">
-          <CardTitle className="text-xl font-bold">Chat about {personalData.name}</CardTitle>
-          <div className="text-sm text-muted-foreground">
-            {count}/{limit} uses
+          <CardTitle className="text-xl font-black text-foreground tracking-tight flex items-center gap-2">
+            <Bot className="w-6 h-6 text-primary" />
+            Neural Interface
+          </CardTitle>
+          <div className="text-[10px] font-black uppercase tracking-[0.2em] text-foreground/50 bg-white/5 px-2 py-1 rounded">
+            Bandwidth: {count}/{limit}
           </div>
         </div>
       </CardHeader>
-      <CardContent className="flex-1 overflow-hidden p-0">
+      <CardContent className="flex-1 overflow-hidden p-0 relative z-10">
         <ScrollArea className="h-full p-4" ref={scrollAreaRef}>
           <div className="space-y-6">
             {messages.map((message, index) => (
@@ -185,35 +188,35 @@ export function Chat() {
                 )}
               >
                 {message.role === "ai" && (
-                  <Avatar className="h-8 w-8 border">
-                    <AvatarFallback><Bot className="h-5 w-5"/></AvatarFallback>
+                  <Avatar className="h-8 w-8 border border-white/10 bg-primary/20">
+                    <AvatarFallback className="bg-transparent text-primary"><Bot className="h-5 w-5"/></AvatarFallback>
                   </Avatar>
                 )}
                 <div
                   className={cn(
-                    "max-w-sm sm:max-w-md md:max-w-lg rounded-xl px-4 py-3 shadow",
+                    "max-w-sm sm:max-w-md md:max-w-lg rounded-2xl px-5 py-3 shadow-xl border",
                     message.role === "user"
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-secondary text-secondary-foreground"
+                      ? "bg-primary text-primary-foreground border-primary/20 font-bold"
+                      : "bg-white/10 text-foreground border-white/5 backdrop-blur-sm"
                   )}
                 >
                    {message.role === 'user' ? (
                      <p className="text-sm whitespace-pre-wrap">{message.content}</p>
                    ) : (
                     <>
-                      <div className="markdown-content text-sm text-secondary-foreground">
+                      <div className="markdown-content text-sm leading-relaxed font-medium">
                         <ReactMarkdown remarkPlugins={[remarkGfm]}>
                           {message.content}
                         </ReactMarkdown>
                       </div>
                       {message.actions && message.actions.length > 0 && (
-                        <div className="mt-4 flex flex-wrap gap-2 border-t border-secondary-foreground/20 pt-3">
+                        <div className="mt-4 flex flex-wrap gap-2 border-t border-white/10 pt-3">
                           {message.actions.map((action, i) => (
                             <Button
                               key={i}
                               variant="outline"
                               size="sm"
-                              className="h-auto py-1.5 text-xs bg-background/20 hover:bg-background/40"
+                              className="h-auto py-1.5 text-[10px] font-black uppercase tracking-widest bg-white/5 border-white/10 hover:bg-white/20 text-foreground"
                               asChild
                             >
                               <a href={action.link} target="_blank" rel="noopener noreferrer">
@@ -227,37 +230,37 @@ export function Chat() {
                    )}
                 </div>
                 {message.role === "user" && (
-                  <Avatar className="h-8 w-8 border">
-                     <AvatarFallback><User className="h-5 w-5"/></AvatarFallback>
+                  <Avatar className="h-8 w-8 border border-white/10 bg-secondary/20">
+                     <AvatarFallback className="bg-transparent text-secondary"><User className="h-5 w-5"/></AvatarFallback>
                   </Avatar>
                 )}
               </div>
             ))}
             {loading && (
                  <div className="flex items-start gap-4">
-                    <Avatar className="h-8 w-8 border">
-                        <AvatarFallback><Bot className="h-5 w-5"/></AvatarFallback>
+                    <Avatar className="h-8 w-8 border border-white/10 bg-primary/20">
+                        <AvatarFallback className="bg-transparent text-primary"><Bot className="h-5 w-5"/></AvatarFallback>
                     </Avatar>
-                    <div className="bg-secondary text-secondary-foreground rounded-xl px-4 py-3 shadow flex items-center space-x-2">
-                        <Loader2 className="h-5 w-5 animate-spin" />
-                        <span className="text-sm">Thinking...</span>
+                    <div className="bg-white/10 border border-white/5 backdrop-blur-sm rounded-2xl px-5 py-3 shadow flex items-center space-x-3">
+                        <Loader2 className="h-4 w-4 animate-spin text-primary" />
+                        <span className="text-xs font-black uppercase tracking-widest text-foreground/70">Processing...</span>
                     </div>
                 </div>
             )}
           </div>
         </ScrollArea>
       </CardContent>
-      <CardFooter className="border-t pt-4 flex-col items-start gap-4">
+      <CardFooter className="border-t border-white/10 pt-4 flex-col items-start gap-4 bg-white/5 relative z-10">
         {suggestedQuestions.length > 0 && !loading && (
             <div className="w-full">
-                <p className="text-xs text-muted-foreground mb-2">Suggestions</p>
+                <p className="text-[10px] font-black uppercase tracking-widest text-foreground/40 mb-2 ml-1">Suggested Protocols</p>
                 <div className="flex flex-wrap gap-2">
                 {suggestedQuestions.map((q, i) => (
                     <Button
                     key={i}
                     variant="outline"
                     size="sm"
-                    className="text-xs h-auto py-1.5"
+                    className="text-[10px] font-bold h-auto py-1.5 bg-white/5 border-white/10 text-foreground hover:bg-primary/20 hover:border-primary/30 transition-all"
                     onClick={() => handleSuggestedQuestionClick(q)}
                     >
                     {q}
@@ -278,7 +281,8 @@ export function Chat() {
                 <FormItem className="flex-1">
                   <FormControl>
                     <Input
-                      placeholder={`Ask a question about ${personalData.name}...`}
+                      placeholder={`Transmit inquiry about ${personalData.name.split(' ')[0]}...`}
+                      className="bg-white/5 border-white/10 text-foreground placeholder:text-foreground/30 focus-visible:ring-primary/50 h-11"
                       {...field}
                       disabled={loading || limitReached}
                       autoComplete="off"
@@ -293,8 +297,8 @@ export function Chat() {
                 </FormItem>
               )}
             />
-            <Button type="submit" size="icon" disabled={loading || limitReached}>
-              {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
+            <Button type="submit" size="icon" className="h-11 w-11 bg-primary hover:bg-primary/80 text-white shadow-[0_0_15px_hsl(var(--primary)/0.4)]" disabled={loading || limitReached}>
+              {loading ? <Loader2 className="h-5 w-5 animate-spin" /> : <Send className="h-5 w-5" />}
               <span className="sr-only">Send</span>
             </Button>
           </form>

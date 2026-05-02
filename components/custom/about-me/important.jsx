@@ -1,6 +1,6 @@
 export function Important({children}) {
   return (
-    <span className="text-primary-foreground">
+    <span className="text-primary font-bold">
       {children}
     </span>
   )

@@ -12,6 +12,10 @@ export const navLink = [
     label: "Projects",
   },
   {
+    href: "/blog",
+    label: "Blog",
+  },
+  {
     href: "/education",
     label: "Education",
   },

@@ -7,10 +7,10 @@ export function SocialHandle({Social}) {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex text-secondary-foreground/70 hover:text-primary items-center text-sm font-medium"
+      className="flex text-foreground hover:text-primary items-center text-sm font-bold p-2 rounded-md hover:bg-white/10 transition-colors group"
     >
-      <Icon className="mr-2 text-primary"/>
-      <span>{name}</span>
+      <Icon className="mr-2 text-primary group-hover:scale-110 transition-transform"/>
+      <span className="drop-shadow-sm">{name}</span>
     </Link>
   )
 }

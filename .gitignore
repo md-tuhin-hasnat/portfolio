@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# agent/tooling
+.gemini/
+graphify-out/
+temp-portfolio/
+GEMINI.md
